@@ -1,7 +1,8 @@
 import React from 'react';
+import { PageComponent } from '../../../../core/PageComponent';
 
 
-class LoginPage extends React.Component {
+class LoginPage extends PageComponent {
 
 
     render () {

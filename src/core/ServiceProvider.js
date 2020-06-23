@@ -1,7 +1,9 @@
 import LoginServiceProvider from "../modules/admin/LoginModule/LoginServiceProvider";
+import HomeServiceProvider from "../modules/front/HomeModule/HomeServiceProvider";
 
 const ServiceProviderContainer = [
-    LoginServiceProvider    
+    LoginServiceProvider,
+    HomeServiceProvider
 ];
 
 class ServiceProvider {

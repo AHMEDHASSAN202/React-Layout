@@ -2,7 +2,7 @@ import LoginPage from './Pages/LoginPage';
 
 const routes = [
     {
-        path: '/login',
+        path: '/admin/login',
         component: LoginPage
     }
 ];
