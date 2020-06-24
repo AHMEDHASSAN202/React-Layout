@@ -3,31 +3,25 @@ import ReactDOM from 'react-dom';
 import {
     BrowserRouter as Router,
     Route,
-    Switch,
   } from "react-router-dom";
 
 
 const routesList = [];
 
-
 const Routes = () => {
     const routes = routesList.map((route, index) => {
-        return (
-            <Route path={route.path} component={route.component} key={index} exact={true}></Route>
-        );
+        return <Route path={route.path} component={route.component} key={index} exact={route.exact}></Route>;
     })
 
     return (
         <Router>
-            <Switch>
-            {routes}
-            </Switch>
+            { routes }
         </Router>
     );
 };
 
-export function addRoute(path, component) {
-    routesList.push({path, component});
+export function addRoute(route) {
+    routesList.push(route);
 }
 
 export function scan() {

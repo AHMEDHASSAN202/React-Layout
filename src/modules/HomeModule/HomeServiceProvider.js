@@ -1,5 +1,5 @@
 import routes from './routes';
-import BaseServiceProvider from '../../../core/BaseServiceProvider';
+import BaseServiceProvider from '../../core/BaseServiceProvider';
 
 class HomeServiceProvider extends BaseServiceProvider {
     constructor() {

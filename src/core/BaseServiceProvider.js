@@ -8,7 +8,7 @@ class BaseServiceProvider {
     mapRoutes() {
         if (!this.routes) return ;
         for (let route of this.routes) {
-            addRoute(route.path, route.component);
+            addRoute(route);
         }
     }
 }

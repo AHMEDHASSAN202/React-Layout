@@ -1,9 +1,8 @@
+import './index.css';
 import Reactor from './core/Reactor';
-import './modules/admin/LoginModule/routes.js';
-
+import './shared/config';
 
 const reactor = new Reactor();
-
 
 reactor.offlineApplication();
 

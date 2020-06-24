@@ -1,14 +1,13 @@
 import React from 'react';
-import { PageComponent } from '../../../../core/PageComponent';
 import LoginComponent from '../Components/LoginComponent';
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import { AdminTheme } from '../../../../shared/Constants/theme';
 import { Is } from '@flk/supportive-is';
+import { ReactorComponent } from '../../../core/ReactorComponent';
+import { AdminTheme } from '../../../shared/Constants/theme';
 
 const theme = AdminTheme;
 
-class LoginPage extends PageComponent {
-
+class LoginPage extends ReactorComponent {
 
     submitLoginForm = e => {
         e.preventDefault();

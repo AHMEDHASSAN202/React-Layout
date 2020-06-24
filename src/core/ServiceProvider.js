@@ -1,8 +1,10 @@
-import LoginServiceProvider from "../modules/admin/LoginModule/LoginServiceProvider";
-import HomeServiceProvider from "../modules/front/HomeModule/HomeServiceProvider";
+import AdminLoginServiceProvider from "../modules/AdminLoginModule/AdminLoginServiceProvider";
+import DashboardServiceProvider from "../modules/DashboardModule/DashboardServiceProvider";
+import HomeServiceProvider from "../modules/HomeModule/HomeServiceProvider";
 
 const ServiceProviderContainer = [
-    LoginServiceProvider,
+    AdminLoginServiceProvider,
+    DashboardServiceProvider,
     HomeServiceProvider
 ];
 
