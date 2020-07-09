@@ -5,7 +5,7 @@ import HomeServiceProvider from "../modules/HomeModule/HomeServiceProvider";
 const ServiceProviderContainer = [
     AdminLoginServiceProvider,
     DashboardServiceProvider,
-    HomeServiceProvider
+    HomeServiceProvider,
 ];
 
 class ServiceProvider {

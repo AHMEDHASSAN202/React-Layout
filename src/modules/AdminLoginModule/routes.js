@@ -4,7 +4,7 @@ const routes = [
     {
         path: '/admin/login',
         component: LoginPage,
-        exact: true
+        exact: false,
     }
 ];
 

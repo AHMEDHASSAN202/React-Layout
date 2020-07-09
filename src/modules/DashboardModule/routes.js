@@ -1,10 +1,22 @@
 import DashboardLayout from "./DashboardLayout";
+import DashboardPage from "./Pages/DashboardPage";
+import { TestPage } from './Pages/TestPage';
 
 const routes = [
     {
-        path: '/admin',
+        path: '/dashboard',
         component: DashboardLayout,
-        exact: true
+        routes: [
+            {
+                path: "/dashboard/test",
+                component: TestPage
+            },
+            {
+                path: "",
+                component: DashboardPage,
+                exact: true,      
+            },
+        ]
     }
 ];
 

@@ -3,19 +3,20 @@ import ReactDOM from 'react-dom';
 import {
     BrowserRouter as Router,
     Route,
+    Switch,
   } from "react-router-dom";
 
 
 const routesList = [];
 
 const Routes = () => {
-    const routes = routesList.map((route, index) => {
-        return <Route path={route.path} component={route.component} key={index} exact={route.exact}></Route>;
-    })
-
     return (
         <Router>
-            { routes }
+            <Switch>
+                {routesList.map((route, i) => (
+                    <RouteWithSubRoutes key={i} {...route} />
+                ))}
+            </Switch>
         </Router>
     );
 };
@@ -26,4 +27,18 @@ export function addRoute(route) {
 
 export function scan() {
     ReactDOM.render(<Routes />, document.getElementById('root'));    
+}
+
+export function RouteWithSubRoutes({path, component, routes = [], exact = false}) {
+    const MainComponent = component;
+    return (
+        <Route
+          path={path}
+          exact={exact}
+          render={props => (
+            // pass the sub-routes down to keep nesting
+            <MainComponent {...props} routes={routes} />
+          )}
+        />
+    );
 }
